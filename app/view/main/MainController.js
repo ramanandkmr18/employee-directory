@@ -21,6 +21,23 @@ Ext.define('EmployeeDirectory.view.main.MainController', {
             this.repaintList(treelist);
         }
 	},
+	afterRendererGreetings:function(panel){
+		
+		var myDate = new Date();
+		var hrs = myDate.getHours();
+
+		var greet;
+
+		if (hrs < 12)
+			greet = 'Good Morning';
+		else if (hrs >= 12 && hrs <= 17)
+			greet = 'Good Afternoon';
+		else if (hrs >= 17 && hrs <= 24)
+			greet = 'Good Evening';
+		
+		panel.down("#greetingButton").setText(greet +"    Pavan"); 
+		
+	},
     onToggleMicro: function(button, pressed) {
         var treelist = this.lookupReference('treelist'), 
             ct = treelist.ownerCt; 

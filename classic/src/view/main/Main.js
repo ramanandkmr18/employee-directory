@@ -27,26 +27,25 @@ Ext.define('EmployeeDirectory.view.main.Main', {
             xtype: 'button',
             enableToggle: true, 
 			cls: 'accolite-logo',
-			height:70,
-			width:'20%' ,
+			height:40,
+			width:'15%' ,
 			padding:'0 30 0 0'
         },{
             xtype: 'button',
             enableToggle: true, 
 			iconCls: 'icon-list',
 			height:40,
-			width:40,
-			margin:'0 20 0 0',
+			width:'5%',
             toggleHandler: 'onToggleMicro'
         },{
 			xtype:'tbspacer',
-			width: '65%' //change percentage to desired button position 
+			width: '74%' //change percentage to desired button position 
 	   },
 	   {
 			xtype: 'splitbutton',
             cls:'login-user-pic', 
-			height:60,
-			width:'10%',
+			height:40,
+			width:'5%',
             enableToggle: true
 	   }]
     },
@@ -74,6 +73,53 @@ Ext.define('EmployeeDirectory.view.main.Main', {
         bodyPadding: 10,
         bind: {
             html: '{selectionText}'
-        }
+        },
+		layout:'border',
+		xtype:'container',
+		items:[{
+			region: 'north',
+			height:100,
+			border:0,			
+			layout:'center', 
+			cls:'greeting-cls',
+			items:[{
+				xtype:'button',
+				itemId:'greetingButton'	,
+				height:70
+			}], 
+			listeners:{
+				afterrender:'afterRendererGreetings'
+			}
+			
+		},{
+			region: 'center',
+			xtype:'tabpanel',
+			ui: 'navigation',
+			tabBar: {
+				layout: {
+					pack: 'center'
+				}, 
+				border: false
+			},
+
+			defaults: {
+				iconAlign: 'top',
+				bodyPadding: 15
+			},
+
+			items: [{
+				title: 'Manager',
+				glyph: 72,
+				html: 'Manager Info'
+			}, {
+				title: 'Organization',
+				glyph: 117,
+				html: ' D3 Chart'
+			}, {
+				title: 'Office',
+				glyph: 85,
+				html: "Group"
+			}]
+		}]
     }]
 });

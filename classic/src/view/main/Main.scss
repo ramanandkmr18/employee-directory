@@ -131,15 +131,33 @@
 		height: 32px;
 	}
 	.accolite-logo{
-		background-image: url('/resources/images/main/Accolite_Logo.jpg') !important;
+		background-image: url('/resources/images/main/accolite_logo.png') !important;
 		background-repeat: no-repeat;
 	}
 	.login-user-pic{
-		background-image: url('/resources/images/main/profile.png') !important;
+		background-image: url('/resources/images/main/profile1.png') !important;
 		background-repeat: no-repeat;
 	}
 	
 	.x-panel-header-default-horizontal.x-header-noborder {
 		padding: 12px 0px 12px 0px;
 	}
+	.greeting-cls{
+		.x-btn-inner-default-small {
+			font: 500 18px/16px 'Lucida Sans Unicode', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
+			color: #837E7C; 
+			max-width: 100%;
+		} 
+		.x-btn-default-small { 
+			background-color: #ffffff !important;		
+			border-radius: 10px !important;
+			border: 2px solid $backgroundcolor;
+		}
+		.x-btn.x-btn-pressed.x-btn-default-small{
+		    border-color:#F39C12 !important;
+			background-color:#FFFFFF !important;
+			border-radius: 10px !important;
+			border: 2px solid #E67E22;
+		} 
+	}	
 }

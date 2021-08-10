@@ -20,7 +20,7 @@ Ext.define('EmployeeDirectory.view.main.MainModel', {
             else {
                 return 'No node selected';
             }
-        }
+        } 
     },
 
     stores: {
